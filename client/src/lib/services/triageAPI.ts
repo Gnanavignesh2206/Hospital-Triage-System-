@@ -22,7 +22,7 @@ export interface BookAppointmentData {
 }
 
 class TriageAPI {
-  private baseURL = "/api/triage";
+  private baseURL = import.meta.env.VITE_API_URL || "http://localhost:5000/api/triage";
 
   async assessPatient(
     patientQuery: PatientQuery,

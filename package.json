@@ -3,11 +3,14 @@
   "version": "1.0.0",
   "type": "module",
   "license": "MIT",
+  "homepage": "https://gnanavignesh2206.github.io/Hospital-Triage-System-/",
   "scripts": {
     "dev": "tsx server/index.ts",
-    "build": "tsc && vite build",
+    "build": "cd client && npm run build && cd ..",
+    "build:client": "vite build --root client",
     "start": "node dist/server.js",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "deploy": "npm run build:client && gh-pages -d client/dist"
   },
   "dependencies": {
     "dotenv": "^16.0.3",
@@ -23,6 +26,7 @@
     "@types/react-dom": "^18.2.6",
     "@vitejs/plugin-react": "^4.0.3",
     "autoprefixer": "^10.4.14",
+    "gh-pages": "^6.3.0",
     "postcss": "^8.4.24",
     "tailwindcss": "^3.3.2",
     "tsx": "^3.12.8",
