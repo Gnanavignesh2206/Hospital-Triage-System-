@@ -6,8 +6,8 @@
   "homepage": "https://gnanavignesh2206.github.io/Hospital-Triage-System-/",
   "scripts": {
     "dev": "tsx server/index.ts",
-    "build": "cd client && npm run build && cd ..",
-    "build:client": "vite build --root client",
+    "build": "vite build",
+    "build:client": "vite build",
     "start": "node dist/server.js",
     "preview": "vite preview",
     "deploy": "npm run build:client && gh-pages -d client/dist"
