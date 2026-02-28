@@ -1,4 +1,4 @@
-import type { Express } from "express";
+import express, { type Express } from "express";
 import { fileURLToPath } from "url";
 import { dirname, join } from "path";
 
